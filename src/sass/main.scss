@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: antiquewhite;
+    color: rgba(0,0,0,0.75);
+}
+
+$header-height: 6rem;
+$footer-height: 4rem;
+
+.app {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+    &__header {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        height: $header-height;
+
+        &__buttons {
+            margin-left: 2rem;
+        }
+    }
+
+    &__main {
+        flex-grow: 1;
+        border-bottom: 1px solid lightgray;
+    }
+
+    &__footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: $footer-height;
+    }
+}
+
+@import "./fonts";
+@import "./toolbar";

@@ -1,0 +1,13 @@
+#toolbar {
+    border-top: 1px solid burlywood;
+    border-bottom: 1px solid burlywood;
+}
+
+.editor-container {
+    border-bottom: 1px solid burlywood;
+}
+
+.ql-container {
+    padding: 1rem 0;
+    border: none !important;
+}
