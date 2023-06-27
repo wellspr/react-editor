@@ -1,12 +1,19 @@
 {
   "compilerOptions": {
     "target": "ESNext",
+    "useDefineForClassFields": true,
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "allowJs": false,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
     "module": "ESNext",
-    "skipLibCheck": true,
+    /*"skipLibCheck": true,*/
+    "esModuleInterop": true,
+    "declarationMap": true,
+    "declaration": true,
 
     /* Bundler mode */
-    "moduleResolution": "bundler",
+    "moduleResolution": "Node",
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
@@ -17,7 +24,15 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    /*"noFallthroughCasesInSwitch": true,*/
+    "baseUrl": ".",
+    "paths": {
+        "react-quill-editor": ["src/quill-editor/index.ts"],
+    },
+    "typeRoots": [
+        "node_modules/@types",
+        "src/quill-editor/index.d.ts",
+    ],
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]

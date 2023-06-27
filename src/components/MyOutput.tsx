@@ -1,5 +1,5 @@
 import { FC, useEffect } from "react";
-import { useEditor } from "../quill-editor/hooks/useEditor";
+import { useEditor } from "react-quill-editor";
 
 const MyOutput: FC = () => {
 

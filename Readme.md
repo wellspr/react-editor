@@ -22,7 +22,7 @@ The Editor component renders the editor on the screen, and expects a prop `heigh
 <Editor height={300} />
 ```
 
-One can also provide height as a string, `height={"300px"}` or even as a percentage, `height={"85%"}`.
+One can also provide height as a string, including specific units, for example `height={"300px"}` or `height={"85%"}`.
 
 ### Custom Toolbar
 
@@ -52,7 +52,7 @@ export default App;
 `MyEditorProvider.tsx`
 ```tsx
 import { FC, ReactNode } from "react";
-import { Provider } from "../quill-editor";
+import { Provider } from "react-quill-editor";
 import { customOpt, customFonts } from "../config/myCustomConfig";
 
 interface MyEditorProps {
@@ -73,7 +73,7 @@ export default MyEditorProvider;
 `MyEditor.tsx`
 ```tsx
 import { FC } from "react";
-import Editor from "../quill-editor";
+import Editor from "react-quill-editor";
 
 const MyEditor: FC = () => {
     return (
