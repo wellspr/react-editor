@@ -1,12 +1,9 @@
-import "quill/dist/quill.snow.css";
-import "quill/dist/quill.bubble.css";
-import "../index.css";
 import Quill, { QuillOptionsStatic } from "quill";
 import { FC, ReactNode, useEffect, useState } from "react";
 import { Context } from "../Context";
 import { fonts, options as defaultOptions } from "../config";
 
-interface ProviderProps {
+export interface ProviderProps {
     config: {
         options?: QuillOptionsStatic;
         fonts?: string[];

@@ -1,4 +1,3 @@
-//import "../dist/style.css";
 import { FC } from "react";
 import MyEditorProvider from "./components/MyEditorProvider";
 import MyEditor from "./components/MyEditor";

@@ -1,39 +1,45 @@
 {
-  "compilerOptions": {
-    "target": "ESNext",
-    "useDefineForClassFields": true,
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
-    "allowJs": false,
-    "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": true,
-    "module": "ESNext",
-    /*"skipLibCheck": true,*/
-    "esModuleInterop": true,
-    "declarationMap": true,
-    "declaration": true,
-
-    /* Bundler mode */
-    "moduleResolution": "Node",
-    "allowImportingTsExtensions": true,
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx",
-
-    /* Linting */
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    /*"noFallthroughCasesInSwitch": true,*/
-    "baseUrl": ".",
-    "paths": {
-        "react-quill-editor": ["src/quill-editor/index.ts"],
+    "compilerOptions": {
+        "target": "ESNext",
+        "useDefineForClassFields": true,
+        "lib": [
+            "DOM",
+            "DOM.Iterable",
+            "ESNext"
+        ],
+        "allowJs": false,
+        "allowSyntheticDefaultImports": true,
+        "strict": true,
+        "forceConsistentCasingInFileNames": true,
+        "module": "ESNext",
+        "moduleResolution": "Node",
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "esModuleInterop": true,
+        "declarationMap": true,
+        "noEmit": true,
+        "declaration": true,
+        "allowImportingTsExtensions": true,
+        "jsx": "react-jsx",
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "baseUrl": ".",
+        "paths": {
+            "react-quill-editor": [
+                "src/quill-editor/index.ts"
+            ],
+        },
+        "typeRoots": [
+            "node_modules/@types",
+            "src/quill-editor/index.d.ts",
+        ],
     },
-    "typeRoots": [
-        "node_modules/@types",
-        "src/quill-editor/index.d.ts",
+    "include": [
+        "src/**/*"
     ],
-  },
-  "include": ["src"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+    "references": [
+        {
+            "path": "./tsconfig.node.json"
+        }
+    ]
 }

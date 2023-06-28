@@ -1,4 +1,2 @@
-import { useEditor } from "./useEditor";
-import { useEditorHeight } from "./useEditorHeight";
-
-export { useEditor, useEditorHeight };
+export { useEditor } from "./useEditor";
+export { useEditorHeight } from "./useEditorHeight";

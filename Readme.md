@@ -1,6 +1,6 @@
 # React Quill Editor
 
-This is a react typescript wrapper for [React Quill JS Editor](https://quilljs.com). 
+This is a react typescript wrapper for [Quill JS](https://quilljs.com). 
 
 ## Get started
 

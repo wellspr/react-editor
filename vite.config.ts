@@ -10,16 +10,23 @@ export default defineConfig({
     plugins: [
         react(),
         tsConfigPaths(),
+        //dts({ include: ['src/quill-editor/'], }),
         dts({
-            include: ['src/quill-editor/'],
+            insertTypesEntry: true,
+            include: [
+                'src/quill-editor/'
+            ],
+            outDir: "dist/types",
+            copyDtsFiles: true,
         }),
     ],
     build: {
         lib: {
-            entry: resolve('src', 'quill-editor/index.ts'),
-            name: 'ReactQuillEditor',
-            formats: ['es', 'umd'],
-            fileName: (format) => `react-quill-editor.${format}.js`,
+            entry: resolve(__dirname, 'src/quill-editor/index.ts'),
+            name: 'react-quill-editor',
+            //formats: ['es', 'umd'],
+            //fileName: (format) => `react-quill-editor.${format}.js`,
+            fileName: 'react-quill-editor',
         },
         rollupOptions: {
             external: [...Object.keys(packageJson.peerDependencies)],

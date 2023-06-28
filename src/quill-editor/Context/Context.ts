@@ -2,7 +2,7 @@ import Quill, { QuillOptionsStatic } from "quill";
 import { createContext } from "react";
 import { options } from "../config";
 
-interface ContextProps {
+export interface ContextProps {
     editor: Element | null;
     quill: Quill | null;
     options: QuillOptionsStatic;
