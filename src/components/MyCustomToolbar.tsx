@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { customFonts } from "../config/myCustomConfig";
+import { customFonts } from "../config/myCustomFonts";
 
 const MyCustomToolbar: FC = () => {
 

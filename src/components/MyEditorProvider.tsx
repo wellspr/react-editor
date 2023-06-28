@@ -1,6 +1,6 @@
 import { FC, ReactNode } from "react";
 import { Provider } from "react-quill-editor";
-import { customOpt, customFonts } from "../config/myCustomConfig";
+import { customFonts } from "../config/myCustomFonts";
 
 interface MyEditorProps {
     children: ReactNode;
@@ -8,7 +8,15 @@ interface MyEditorProps {
 
 const MyEditorProvider: FC<MyEditorProps> = ({ children }) => {
     return (
-        <Provider config={{ options: customOpt, fonts: customFonts }}>
+        <Provider config={{ 
+            options: {
+                theme: "snow", 
+                modules: {
+                    toolbar: "#toolbar"
+                },
+            }, 
+            fonts: customFonts 
+            }}>
             {children}
         </Provider>
     );
