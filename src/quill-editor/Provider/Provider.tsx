@@ -3,11 +3,13 @@ import { FC, ReactNode, useEffect, useState } from "react";
 import { Context } from "../Context";
 import { fonts, options as defaultOptions } from "../config";
 
+export interface Config {
+    options?: QuillOptionsStatic;
+    fonts?: string[];
+}
+
 export interface ProviderProps {
-    config: {
-        options?: QuillOptionsStatic;
-        fonts?: string[];
-    },
+    config: Config,
     children: ReactNode;
 }
 
