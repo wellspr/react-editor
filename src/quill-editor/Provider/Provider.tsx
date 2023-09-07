@@ -46,7 +46,9 @@ export const Provider: FC<ProviderProps> = ({ config, children }) => {
         }
     }, [editor, quillStarted]);
 
-    return <Context.Provider value={{ editor, quill, options, editorRef }}>
-        {children}
-    </Context.Provider>
+    return (
+        <Context.Provider value={{ editor, quill, options, editorRef }}>
+            {children}
+        </Context.Provider>
+    );
 };

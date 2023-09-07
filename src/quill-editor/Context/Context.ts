@@ -9,6 +9,11 @@ export interface ContextProps {
     editorRef: React.MutableRefObject<HTMLDivElement | null> | null;
 };
 
-const initialValue = { editor: null, quill: null, options: options, editorRef: null };
+const initialValue = { 
+    editor: null, 
+    quill: null, 
+    options: options, 
+    editorRef: null 
+};
 
 export const Context = createContext<ContextProps>(initialValue);
