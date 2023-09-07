@@ -34,6 +34,7 @@ export default defineConfig({
                 exports: "named",
                 globals: {
                     react: "React",
+                    quill: "Quill",
                 },
             },
         },
