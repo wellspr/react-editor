@@ -6,6 +6,9 @@ export interface ContextProps {
     editor: Element | null;
     quill: Quill | null;
     options: QuillOptionsStatic;
+    editorRef: React.MutableRefObject<HTMLDivElement | null> | null;
 };
 
-export const Context = createContext<ContextProps>({ editor: null, quill: null, options: options });
+const initialValue = { editor: null, quill: null, options: options, editorRef: null };
+
+export const Context = createContext<ContextProps>(initialValue);

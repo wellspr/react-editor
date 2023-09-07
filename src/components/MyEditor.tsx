@@ -1,5 +1,5 @@
 import { FC } from "react";
-import Editor from "react-quill-editor";
+import { Editor } from "react-quill-editor";
 import MyCustomToolbar from "./MyCustomToolbar";
 
 const MyEditor: FC = () => {
