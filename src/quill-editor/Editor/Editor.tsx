@@ -9,7 +9,7 @@ export interface EditorProps {
 
 const Editor: FC<EditorProps> = ({ height, children }) => {
 
-    const { quill, options } = useEditor();
+    const { quill, options, editorRef } = useEditor();
     const { editorHeight } = useEditorHeight(height, quill);
 
     useEffect(() => { quill && quill.focus() }, [quill]);
@@ -26,7 +26,7 @@ const Editor: FC<EditorProps> = ({ height, children }) => {
     return (
         <div className="editor-container" style={{ height }}>
             { renderCustomToolbar() }
-            <div id="editor" style={{
+            <div ref={editorRef} style={{
                 height: editorHeight,
                 maxHeight: editorHeight
             }}
