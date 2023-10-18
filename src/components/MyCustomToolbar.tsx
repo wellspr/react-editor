@@ -9,23 +9,18 @@ const MyCustomToolbar: FC = () => {
                 <div className="stacked">
                     <label htmlFor="header">Header</label>
                     <select name="header" id="header" className="ql-header">
-                        <option value="0">Normal</option>
-                        <option value="1">Header 1</option>
-                        <option value="2">Header 2</option>
-                        <option value="3">Header 3</option>
-                        <option value="4">Header 4</option>
-                        <option value="5">Header 5</option>
-                        <option value="6">Header 6</option>
+                        <option value="">Normal</option>
+                        {
+                            [1, 2, 3, 4, 5, 6].map(n => <option value={n} key={n}>H{n}</option>)
+                        }
                     </select>
                 </div>
                 <div className="stacked">
                     <label htmlFor="font">Font Family</label>
                     <select name="font" id="font" className="ql-font">
                         <option value="none"></option>
-                        { 
-                            customFonts.map(font => {
-                                return <option value={font} key={font}>{font}</option>
-                            })
+                        {
+                            customFonts.map(font => <option value={font} key={font}>{font}</option>)
                         }
                     </select>
                 </div>
@@ -46,7 +41,7 @@ const MyCustomToolbar: FC = () => {
                 <button className="ql-indent" value="+1"></button>
                 <button className="ql-indent" value="-1"></button>
                 <select className="ql-align"></select>
-                
+
                 <button className="ql-blockquote"></button>
                 <button className="ql-link"></button>
                 <button className="ql-code"></button>
