@@ -1,17 +1,8 @@
 import Quill, { QuillOptionsStatic } from "quill";
-import { FC, ReactNode, useEffect, useRef, useState } from "react";
+import { FC, useEffect, useRef, useState } from "react";
 import { Context } from "../Context";
 import { fonts, options as defaultOptions } from "../config";
-
-export interface Config {
-    options?: QuillOptionsStatic;
-    fonts?: string[];
-}
-
-export interface ProviderProps {
-    config: Config,
-    children: ReactNode;
-}
+import { Content, ProviderProps } from "../types";
 
 export const Provider: FC<ProviderProps> = ({ config, children }) => {
 
@@ -26,7 +17,6 @@ export const Provider: FC<ProviderProps> = ({ config, children }) => {
     }, [config.options]);
 
     useEffect(() => {
-
         if (editorRef.current) {
             setEditor(editorRef.current);
 
@@ -46,8 +36,33 @@ export const Provider: FC<ProviderProps> = ({ config, children }) => {
         }
     }, [editor, quillStarted]);
 
+    const [content, setContent] = useState<Content>({
+        delta: quill?.getContents(),
+        html: quill?.root.innerHTML,
+    });
+
+    useEffect(() => {
+        const handler = () => {
+            const delta = quill?.getContents();
+            const html = quill?.root.innerHTML;
+            setContent({ delta, html });
+        };
+
+        if (quill) {
+            quill.on("editor-change", handler);
+        }
+
+        return () => {
+            if (quill) {
+                quill.off("editor-change", handler);
+            }
+        }
+    }, [quill]);
+
+    const value = { editor, quill, options, editorRef, content };
+
     return (
-        <Context.Provider value={{ editor, quill, options, editorRef }}>
+        <Context.Provider value={value}>
             {children}
         </Context.Provider>
     );
