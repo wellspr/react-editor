@@ -8,7 +8,7 @@ All editor components and hooks must be children of a `Provider` component, whic
 
 ### Provider
 
-```js
+```jsx
 <Provider config={{ options: customOpt, fonts: customFonts }}>
     {children}
 </Provider>
@@ -18,7 +18,7 @@ All editor components and hooks must be children of a `Provider` component, whic
 
 The Editor component renders the editor on the screen, and expects a prop `height`. Bellow we render the Editor with a height of 300px. 
 
-```js
+```jsx
 <Editor height={300} />
 ```
 
@@ -32,7 +32,7 @@ A custom toolbar can be provided as a child of `Editor`.
 ## Example
 
 `App.tsx`
-```tsx
+```jsx
 import { FC } from "react";
 import MyEditorProvider from "./components/MyEditorProvider";
 import MyEditor from "./components/MyEditor";
@@ -50,7 +50,7 @@ export default App;
 ```
 
 `MyEditorProvider.tsx`
-```tsx
+```jsx
 import { FC, ReactNode } from "react";
 import { Provider } from "react-quill-editor";
 import { customOpt, customFonts } from "../config/myCustomConfig";
@@ -71,11 +71,18 @@ export default MyEditorProvider;
 ```
 
 `MyEditor.tsx`
-```tsx
+```jsx
 import { FC } from "react";
 import Editor from "react-quill-editor";
 
 const MyEditor: FC = () => {
+
+    const { content } = useEditor();
+
+    useEffect(() => {
+        console.log(content);
+    }, [content]);
+
     return (
         <Editor height={300} />
     );
