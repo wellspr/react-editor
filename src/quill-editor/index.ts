@@ -6,7 +6,7 @@ import Quill, { QuillOptionsStatic } from "quill";
 
 export type QuillType = Quill;
 export type QuillOptions = QuillOptionsStatic;
-export type { Config } from "./Provider/Provider";
+export type { Config } from "./types";
 
 export { Provider } from "./Provider";
 export { Editor } from "./Editor";
