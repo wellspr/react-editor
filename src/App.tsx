@@ -1,7 +1,5 @@
 import { FC } from "react";
-import MyEditorProvider from "./components/MyEditorProvider";
-import MyEditor from "./components/MyEditor";
-import MyOutput from "./components/MyOutput";
+import { MyEditor, MyEditorProvider } from "./components";
 
 const App: FC = () => {
     return (
@@ -12,7 +10,6 @@ const App: FC = () => {
             <main className="app__main">
                 <MyEditorProvider>
                     <MyEditor />
-                    <MyOutput />
                 </MyEditorProvider>
             </main>
             <footer className="app__footer">
