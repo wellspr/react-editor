@@ -1,8 +1,7 @@
 import { FC, ReactNode, useEffect } from "react";
-import { useEditor } from "../hooks";
-import { useEditorHeight } from "../hooks";
+import { useEditor, useEditorHeight } from "../hooks";
 
-export interface EditorProps {
+interface EditorProps {
     children?: ReactNode;
     height: number | string;
 }
