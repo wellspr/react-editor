@@ -1,5 +1,6 @@
 import Quill, { QuillOptionsStatic } from "quill";
 import Delta from "quill-delta";
+export type DeltaType = Delta;
 
 export type Config = {
     options?: QuillOptionsStatic;
@@ -7,7 +8,7 @@ export type Config = {
 }
 
 export type Content = { 
-    delta: typeof Delta | undefined;
+    delta: DeltaType | undefined;
     html: string | undefined;
 }
 
