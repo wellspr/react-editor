@@ -1,3 +1,4 @@
+import "highlight.js/styles/stackoverflow-dark.min.css";
 import { FC, ReactNode } from "react";
 import { Provider } from "react-quill-editor";
 import type { Config } from "react-quill-editor";
@@ -11,6 +12,7 @@ const config: Config = {
     options: {
         theme: "snow",
         modules: {
+            syntax: true,
             toolbar: "#toolbar"
         },
     },
