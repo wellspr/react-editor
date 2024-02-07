@@ -1,7 +1,7 @@
 {
     "name": "@wellspr/react-quill-editor",
     "private": false,
-    "version": "0.1.4",
+    "version": "0.1.6",
     "type": "module",
     "scripts": {
         "dev": "vite",
@@ -27,37 +27,37 @@
         "highlight.js": "^11.9.0",
         "quill": "^1.3.7",
         "quill-delta": "^5.1.0",
-        "react": ">=18.2.0",
-        "react-dom": ">=18.2.0"
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
     },
     "devDependencies": {
-        "@types/node": "^20.3.2",
-        "@types/quill": "^2.0.13",
-        "@types/react": "^18.0.28",
-        "@types/react-dom": "^18.0.11",
-        "@typescript-eslint/eslint-plugin": "^5.57.1",
-        "@typescript-eslint/parser": "^5.57.1",
-        "@vitejs/plugin-react": "^4.0.0",
-        "eslint": "^8.38.0",
+        "@types/node": "^20.11.16",
+        "@types/quill": "^2.0.14",
+        "@types/react": "^18.2.55",
+        "@types/react-dom": "^18.2.18",
+        "@typescript-eslint/eslint-plugin": "^5.62.0",
+        "@typescript-eslint/parser": "^5.62.0",
+        "@vitejs/plugin-react": "^4.2.1",
+        "eslint": "^8.56.0",
         "eslint-plugin-react-hooks": "^4.6.0",
-        "eslint-plugin-react-refresh": "^0.3.4",
+        "eslint-plugin-react-refresh": "^0.3.5",
         "path": "^0.12.7",
-        "sass": "^1.62.1",
+        "sass": "^1.70.0",
         "typescript": "^5.0.2",
-        "vite": "^4.3.2",
-        "vite-plugin-dts": "^3.0.0-beta.1",
-        "vite-tsconfig-paths": "^4.2.0"
+        "vite": "^4.5.2",
+        "vite-plugin-dts": "^3.7.2",
+        "vite-tsconfig-paths": "^4.3.1"
     },
     "peerDependencies": {
         "highlight.js": "^11.9.0",
         "quill": "^1.3.7",
         "quill-delta": "^5.1.0",
-        "react": ">=18.2.0",
-        "react-dom": ">=18.2.0"
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/wellspr/react-quill-editor"
+        "url": "git+https://github.com/wellspr/react-quill-editor.git"
     },
     "keywords": [
         "react",

@@ -46,6 +46,7 @@ const MyCustomToolbar: FC = () => {
                 <button className="ql-link"></button>
                 <button className="ql-code"></button>
                 <button className="ql-code-block"></button>
+                <button className="ql-formula"></button>
 
                 <select className="ql-color"></select>
                 <select className="ql-background"></select>
